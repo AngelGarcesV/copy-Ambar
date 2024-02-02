@@ -47,7 +47,7 @@ class ProductoController():
     def updateProduct(self, _id, infoProducto):
         print("actualizando un producto")
         dict = []
-        if infoProducto["nombre"] and infoProducto["referencia"] and infoProducto["imagenProducto"] and infoProducto["cantidadTallaS"] and infoProducto["cantidadTallaM"] and infoProducto["cantidadTallaL"]:
+        if infoProducto["nombre"] and infoProducto["referencia"] and infoProducto["imagenProducto"]:
             search = self.RepositorioProductos.getByReferencia(infoProducto["referencia"])
             print(search)
             if not search or str(search["_id"]) == _id:
